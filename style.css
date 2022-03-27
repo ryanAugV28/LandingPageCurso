@@ -21,13 +21,13 @@ font-family: 'Open Sans', sans-serif;*/
 body{
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
+    gap: var(--gap);
 }
 .main-bg{
     background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
-    background-size: auto;
+    background-size: cover;
     background-position: center center;
     color: var(--white-color);
-    min-width: 100vh;
 }
 .white-bg{
     background-color: var(--white-color);
@@ -38,7 +38,9 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
 }
 .main-content{
+    max-width: 50rem;
     margin: 0 auto;
+    padding: var(--gap);
 }
 .section{
     min-height: 100vh;
