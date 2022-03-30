@@ -9,7 +9,6 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
     box-sizing: border-box;
 }
 html{
@@ -22,28 +21,34 @@ body{
     font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     gap: var(--gap);
+    line-height: 1.5;
 }
 .main-bg{
-    background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    background-color: #330033;
+    /*background-image: radial-gradient( circle 610px at 5.2% 51.6%,  rgba(5,8,114,1) 0%, rgba(7,3,53,1) 97.5% );
+    */
     background-size: cover;
     background-position: center center;
     color: var(--white-color);
 }
 .white-bg{
     background-color: var(--white-color);
-    min-width: 100vh;
-
+    color: var(--color2);
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Montserrat', sans-serif;
 }
 .main-content{
-    max-width: 50rem;
+    max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 10rem var(--gap);
 }
 .section{
     min-height: 100vh;
+}
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
 }
 .menu{
     position: fixed;
@@ -52,13 +57,22 @@ h1,h2,h3,h4,h5,h6{
     right: 0;
     width: 100%;
     border-bottom: 0.2rem var(--color3) solid;
+    z-index: 1;
 }
 .menu-content{
     display: flex;
     justify-content: space-between;
-    padding: 0;
     align-items: center;
+    padding: 0;
+    padding-bottom: 0;
 
+}
+.menu h1{
+    font-size: 2.3rem;
+    color: black
+}
+.menu h1 a{
+    color: inherit;
 }
 .menu ul{
     list-style: none;
@@ -92,11 +106,11 @@ h1,h2,h3,h4,h5,h6{
     margin-top: 6.5rem;
 }
 .intro-content{
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
-    height: 100vh;
-    justify-content: center;
+    min-height: 100vh;
 }
 .intro-text-content, .intro-img{
     display: flex;
@@ -112,6 +126,7 @@ h1,h2,h3,h4,h5,h6{
     height: auto;
 }
 .conhecimento-content{
+
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     gap: var(--gap);
@@ -194,4 +209,9 @@ h1,h2,h3,h4,h5,h6{
     width: 50rem;
     height: auto;
     font-size: 2.5rem;
+}
+@media (max-width:800px){
+    .intro-content{
+        grid-template-columns: 1fr;
+    }
 }
